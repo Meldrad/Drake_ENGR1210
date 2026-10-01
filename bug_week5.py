@@ -68,7 +68,7 @@ for name, grade in grade_book.items():
 # ============================================================
 print("\n--- Top Student ---")
 top_student = ""
-top_grade = 94
+top_grade = 0
 for name, grade in grade_book.items():
     if grade > top_grade:
         top_student = name
