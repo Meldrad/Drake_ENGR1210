@@ -239,7 +239,7 @@ else:
 #   2. Bug 4 was caused by what?
 #      What kind of error is this typically called? (Hint: it's a very common type of logic error.) 
 #      What are some strategies for avoiding this kind of error in the future? 
-#    A logic error caused this bug. To avoid it, try to not hardcode and use rules. 
+#    A logic error caused this bug. To avoid it, try to not hardcode and watch what is in what tree.  
 #   3. This week we added BOUNDARY and EMPTY to our test
 #      case categories. Why is the boundary case (qty == 5)
 #      more likely to contain a bug than qty == 8 or qty == 3?
