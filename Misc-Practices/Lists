@@ -1,0 +1,5 @@
+letters = ["A", "B", "C", "D", "E"]
+patterns=["._", "_...", "_._.", "_..", "."]
+
+i = letters.index("C")
+print(i, patterns[i])
