@@ -35,6 +35,17 @@ def blink_pattern(pattern):
 print("Board:", hw.board_info())      # tells you which world the HAL picked
 print("Type a morse pattern and watch it blink once.")
 
-pattern = input("\nMorse pattern to blink: ").strip()
-if pattern:
-    blink_pattern(pattern)
+while True:
+    message = input("\nMessage to blink (like hi): ").strip()
+    if message.lower() == "quit":
+        break
+    if message:
+        patterns = encode_message(message)       # "hi" -> ['....', '..']
+        print("Morse:", patterns)
+        for pattern in patterns:
+            if pattern == ' ':
+                hw.set_led_timed(False, WORD_GAP_MS - LETTER_GAP_MS)     # space between words, LED OFF
+            else:
+                blink_pattern(pattern)
+                hw.set_led_timed(False, LETTER_GAP_MS - SYMBOL_GAP_MS)   # gap after a letter
+        print("...done")
