@@ -1,0 +1,8 @@
+my_dog = Dog('Willie', 6)
+print("Name: " + my_dog.name)
+print("Age: " + str(my_dog.age))
+my_dog.sit()
+my_dog.roll_over()
+
+you_dog = Dog('Lucy', 3)
+you_dog.sit()
